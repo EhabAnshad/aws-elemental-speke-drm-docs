@@ -1,4 +1,4 @@
-# AWS Elemental Secure Packager and Encoder Key Exchange API Specification Developer Guide
+# Secure Packager and Encoder Key Exchange API Specification Partner and Customer Guide
 
 -----
 *****Copyright &copy; 2018 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
@@ -14,15 +14,16 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What Is AWS Elemental Secure Packager and Encoder Key Exchange?](what-is-speke.md)
++ [What Is Secure Packager and Encoder Key Exchange?](what-is-speke.md)
 + [Customer Onboarding](customer-onboarding.md)
 + [SPEKE API Specification for DRM Solution Providers](speke-api-specification.md)
-   + [Architectural Overview](architectural-overview.md)
    + [Are You New to SPEKE?](are-you-new-to-speke.md)
-   + [AWS Authentication for SPEKE](aws-authentication.md)
+   + [Authentication](authentication.md)
    + [SPEKE API](the-speke-api.md)
+      + [Payload Components](payload-components.md)
       + [Live Workflow Method Calls](live-workflow-methods.md)
       + [VOD Workflow Method Calls](vod-workflow-methods.md)
       + [Heartbeat](heartbeat.md)
+      + [Overriding the Key Identifier (KID)](kid-override.md)
 + [Document History](doc-history.md)
 + [AWS Glossary](glossary.md)
