@@ -39,6 +39,9 @@ A CPIX element\.
 | 4XX \(Client error\) | Client error message | 1\.\.1 | Description of the client error | 
 | 5XX \(Server error\) | Server error message | 1\.\.1 | Description of the server error | 
 
+**Note**  
+The examples in this section do not include content key encryption\. For information on how to add content key encryption, see [Content Key Encryption](content-key-encryption.md)\. 
+
 *Live Example Request Payload*
 
 The following listing shows a typical live request payload from the media encoder to the DRM key provider:

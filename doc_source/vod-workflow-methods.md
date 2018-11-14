@@ -29,9 +29,12 @@ A CPIX element\.
 | 4XX \(Client error\) | Client error message | 1\.\.1 | Description of the client error | 
 | 5XX \(Server error\) | Server error message | 1\.\.1 | Description of the server error | 
 
+**Note**  
+The examples in this section do not include content key encryption\. For information on how to add content key encryption, see [Content Key Encryption](content-key-encryption.md)\. 
+
 *VOD Example Request Payload*
 
-The following listing shows a typical VOD request payload from the media encoder to the DRM key provider: 
+The following listing shows a basic VOD request payload from the media encoder to the DRM key provider: 
 
 ```
 <cpix:CPIX id="abc123" xmlns:cpix="urn:dashif:org:cpix" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc" xmlns:speke="urn:aws:amazon:com:speke">
@@ -69,7 +72,7 @@ The following listing shows a typical VOD request payload from the media encoder
 
 *VOD Example Response Payload*
 
-The following listing shows a typical VOD response payload from the DRM key provider:
+The following listing shows a basic VOD response payload from the DRM key provider:
 
 ```
 <cpix:CPIX xmlns:cpix="urn:dashif:org:cpix" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc" xmlns:speke="urn:aws:amazon:com:speke" id="abc123">

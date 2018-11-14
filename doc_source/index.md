@@ -15,14 +15,16 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What Is Secure Packager and Encoder Key Exchange?](what-is-speke.md)
++ [Are You New to SPEKE?](are-you-new-to-speke.md)
 + [Customer Onboarding](customer-onboarding.md)
 + [SPEKE API Specification for DRM Solution Providers](speke-api-specification.md)
-   + [Are You New to SPEKE?](are-you-new-to-speke.md)
    + [Authentication](authentication.md)
    + [SPEKE API](the-speke-api.md)
-      + [Payload Components](payload-components.md)
+      + [Customizations and Constraints for the DASH-IF Specification](speke-constraints.md)
+      + [Standard Payload Components](standard-payload-components.md)
       + [Live Workflow Method Calls](live-workflow-methods.md)
       + [VOD Workflow Method Calls](vod-workflow-methods.md)
+      + [Content Key Encryption](content-key-encryption.md)
       + [Heartbeat](heartbeat.md)
       + [Overriding the Key Identifier (KID)](kid-override.md)
 + [Document History](doc-history.md)

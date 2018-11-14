@@ -10,7 +10,7 @@ SPEKE requires authentication for use with AWS Elemental products and services\.
 
 SPEKE requires AWS authentication through IAM roles for use with AWS Elemental Media Services\. IAM roles are created by the DRM system service or by the operator who owns the DRM endpoint in an AWS account\. Each role is assigned an Amazon Resource Name \(ARN\), which the AWS Elemental service operator provides on the service console when requesting encryption\. The role’s policy permissions must be configured to give permission to access the key server API and no other AWS resource access\. When the encryptor contacts the DRM key server, it uses the role ARN to assume the role of the key server account holder, which returns temporary credentials for the encryptor to use to access the key server\. 
 
-One common implementation involves the operator or DRM vendor using Amazon API Gateway in front of the key server, and then enabling AWS IAM authorization on the API Gateway resource\. You can use the following policy definition example and attach it to a new role to give permissions to the appropriate resource\. In this case, the permissions are for all API Gateway resources\. 
+One common implementation is for the operator or DRM vendor to use Amazon API Gateway in front of the key server, and then enable AWS Identity and Access Management \(AWS IAM\) authorization on the API Gateway resource\. You can use the following policy definition example and attach it to a new role to give permissions to the appropriate resource\. In this case, the permissions are for all API Gateway resources: 
 
 ```
 {

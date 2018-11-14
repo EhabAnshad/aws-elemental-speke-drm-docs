@@ -1,6 +1,6 @@
-# Payload Components<a name="payload-components"></a>
+# Standard Payload Components<a name="standard-payload-components"></a>
 
-The request and response payloads for SPEKE vary for live and VOD, but the central components are the same\. You can request responses for one or more DRM systems in each request, specified in the payload's `<cpix:DRMSystemList>`\. For each system specified, you provide the key and indicate the type of response that you want from the DRM key provider\. 
+In any SPEKE request, you can request responses for one or more DRM systems\. You specify the DRM systems in the request payload's `<cpix:DRMSystemList>`\. For each system specified, you provide the key and indicate the type of response that you want from the DRM key provider\. 
 
 The following example shows a DRM system list with a single DRM system specification: 
 
