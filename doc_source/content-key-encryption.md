@@ -1,26 +1,26 @@
 # Content Key Encryption<a name="content-key-encryption"></a>
 
-You can optionally add content key encryption to your SPEKE implementation\. Content key encryption guarantees full end\-to\-end protection by encrypting the content keys for transit, in addition to encrypting the content itself\. If you don't implement this for your key server, you rely on the transport layer encryption plus strong authentication for security\. 
+You can optionally add content key encryption to your SPEKE implementation\. Content key encryption guarantees full end\-to\-end protection by encrypting the content keys for transit, in addition to encrypting the content itself\. If you don't implement this for your key provider, you rely on the transport layer encryption plus strong authentication for security\. 
 
-To use content key encryption in AWS services, customers import certificates into the AWS Certificate Manager and then use the resulting certificate ARNs for their encryption activities\. The media encoder uses the certificate ARNs and the ACM service to provide encrypted content keys to the DRM key provider\. 
+To use content key encryption for encryptors running in AWS Cloud, customers import certificates into the AWS Certificate Manager and then use the resulting certificate ARNs for their encryption activities\. The encryptor uses the certificate ARNs and the ACM service to provide encrypted content keys to the DRM key provider\. 
 
 **Restrictions**  
 SPEKE supports content key encryption as specified in the DASH\-IF CPIX specification with the following restrictions:
 + SPEKE doesn't support digital signature verification \(XMLDSIG\) for request or response payloads\. 
 + SPEKE requires 2048 RSA\-based certificates\.
 
-These restrictions are also listed in [Customizations and Constraints for the DASH\-IF Specification](speke-constraints.md)\.
+These restrictions are also listed in [Customizations and Constraints to the DASH\-IF Specification](speke-constraints.md)\.
 
 **Implement content key encryption**  
 To provide content key encryption, include the following in your DRM key provider implementations: 
 + Handle the element `<cpix:DeliveryDataList>` in the request and response payloads\.
 + Provide encrypted values in the `<cpix:ContentKeyList>` of the response payloads\.
 
-For more information on these elements, see the [DASH\-IF CPIX 2\.0 specification](https://dashif.org/docs/DASH-IF-CPIX-v2-0.pdf)\.
+For more information about these elements, see the [DASH\-IF CPIX 2\.0 specification](https://dashif.org/docs/DASH-IF-CPIX-v2-0.pdf)\.
 
 *Example Content Key Encryption Element `<cpix:DeliveryDataList>` in the Request Payload*
 
-The following example listing highlights the added `<cpix:DeliveryDataList>` element in bold:
+The following example highlights the added `<cpix:DeliveryDataList>` element in bold:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -39,12 +39,13 @@ The following example listing highlights the added `<cpix:DeliveryDataList>` ele
     </cpix:DeliveryDataList>
     <cpix:ContentKeyList>
      ...
+    </cpix:ContentKeyList>
 </cpix:CPIX>
 ```
 
 *Example Content Key Encryption Element `<cpix:DeliveryDataList>` in the Response Payload*
 
-The following example listing highlights the added `<cpix:DeliveryDataList>` element in bold:
+The following example highlights the added `<cpix:DeliveryDataList>` element in bold:
 
 ```
 <cpix:CPIX xmlns:cpix="urn:dashif:org:cpix"
@@ -86,12 +87,13 @@ The following example listing highlights the added `<cpix:DeliveryDataList>` ele
     </cpix:DeliveryDataList>
     <cpix:ContentKeyList>
      ...
+    </cpix:ContentKeyList>
 </cpix:CPIX>
 ```
 
 *Example Content Key Encryption Element `<cpix:ContentKeyList>` in the Response Payload*
 
-The following listing shows encrypted content key handling in the `<cpix:ContentKeyList>` element of the response payload \. This uses the `<pskc:EncryptedValue>` element: 
+The following example shows encrypted content key handling in the `<cpix:ContentKeyList>` element of the response payload\. This uses the `<pskc:EncryptedValue>` element: 
 
 ```
    <cpix:ContentKeyList>
@@ -111,7 +113,7 @@ The following listing shows encrypted content key handling in the `<cpix:Content
     </cpix:ContentKeyList>
 ```
 
-By comparison, the following listing shows a similar response payload with the content key in the clear\. This uses the `<pskc:PlainValue>` element: 
+By comparison, the following example shows a similar response payload with the content key delivered unencrypted, as a clear key\. This uses the `<pskc:PlainValue>` element: 
 
 ```
     <cpix:ContentKeyList>

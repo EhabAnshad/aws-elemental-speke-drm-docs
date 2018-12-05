@@ -1,4 +1,4 @@
-# VOD Workflow Method Calls<a name="vod-workflow-methods"></a>
+# VOD Workflow Method Call Examples<a name="vod-workflow-methods"></a>
 
 *Request Syntax Example*
 
@@ -17,7 +17,7 @@ A CPIX element\.
 
 | Name | Type | Occurs | Description | 
 | --- | --- | --- | --- | 
-| Speke\-User\-Agent | String | 1\.\.1 | String that identifies the key server | 
+| Speke\-User\-Agent | String | 1\.\.1 | String that identifies the key provider | 
 | Content\-Type | String | 1\.\.1 | application/xml | 
 
 *Request Response*
@@ -32,9 +32,9 @@ A CPIX element\.
 **Note**  
 The examples in this section do not include content key encryption\. For information on how to add content key encryption, see [Content Key Encryption](content-key-encryption.md)\. 
 
-*VOD Example Request Payload*
+*VOD Example Request Payload with Keys in the Clear*
 
-The following listing shows a basic VOD request payload from the media encoder to the DRM key provider: 
+The following example shows a basic VOD request payload from the encryptor to the DRM key provider: 
 
 ```
 <cpix:CPIX id="abc123" xmlns:cpix="urn:dashif:org:cpix" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc" xmlns:speke="urn:aws:amazon:com:speke">
@@ -70,9 +70,9 @@ The following listing shows a basic VOD request payload from the media encoder t
     </cpix:CPIX>
 ```
 
-*VOD Example Response Payload*
+*VOD Example Response Payload with Keys in the Clear*
 
-The following listing shows a basic VOD response payload from the DRM key provider:
+The following example shows a basic VOD response payload from the DRM key provider:
 
 ```
 <cpix:CPIX xmlns:cpix="urn:dashif:org:cpix" xmlns:pskc="urn:ietf:params:xml:ns:keyprov:pskc" xmlns:speke="urn:aws:amazon:com:speke" id="abc123">

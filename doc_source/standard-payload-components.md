@@ -1,6 +1,6 @@
 # Standard Payload Components<a name="standard-payload-components"></a>
 
-In any SPEKE request, you can request responses for one or more DRM systems\. You specify the DRM systems in the request payload's `<cpix:DRMSystemList>`\. For each system specified, you provide the key and indicate the type of response that you want from the DRM key provider\. 
+In any SPEKE request, the encryptor can request responses for one or more DRM systems\. The encryptor specifies the DRM systems in `<cpix:DRMSystemList>` of the request payload\. Each system specification includes the key and indicates the type of response to return\. 
 
 The following example shows a DRM system list with a single DRM system specification: 
 
@@ -13,17 +13,17 @@ The following table lists the main components of each `<cpix:DRMSystem>`\.
 | --- | --- | 
 | systemId or schemeId | Unique identifier for the DRM system type, as registered with the DASH IF organization\. For a list, see [DASH\-IF System IDs](https://dashif.org/identifiers/content_protection/)\. | 
 | kid | The key ID\. This is not the actual key, but an identifier that points to the key in a hash table\. | 
-| <cpix:UriExtXKey> | Requests a standard unencrypted key\. You request either this common key response or a PSSH response\.  | 
-| <cpix:PSSH> | Requests a Protection System Specific Header \(PSSH\)\. This type of header contains a reference to the kid, the systemID, plus custom data for the DRM vendor, as part of Common Encryption \(CENC\)\. You request either a PSSH response or a UriExtXKey response\.  | 
+| <cpix:UriExtXKey> | Requests a standard unencrypted key\. The key response type must be either this or the PSSH response\.  | 
+| <cpix:PSSH> | Requests a Protection System Specific Header \(PSSH\)\. This type of header contains a reference to the kid, the systemID, plus custom data for the DRM vendor, as part of Common Encryption \(CENC\)\. The key response type must be either this or the UriExtXKey response\.  | 
 
 *Example Requests for Standard Key and for PSSH *
 
-The following listing shows part of a sample request from the media encoder to the DRM key provider, with the main components highlighted\. The first request is for a standard key, while the second request is for a PSSH response: 
+The following example shows part of a sample request from the encryptor to the DRM key provider, with the main components highlighted\. The first request is for a standard key, while the second request is for a PSSH response: 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/speke/latest/documentation/images/RequestIntro1.png)
 
 *Example Responses for Standard Key and for PSSH *
 
-The following listing shows the corresponding response from the DRM key provider to the media encoder: 
+The following example shows the corresponding response from the DRM key provider to the encryptor: 
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/speke/latest/documentation/images/ResponseIntro1.png)

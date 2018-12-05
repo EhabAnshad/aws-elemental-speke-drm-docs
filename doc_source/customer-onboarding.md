@@ -1,51 +1,14 @@
 # Customer Onboarding<a name="customer-onboarding"></a>
 
-Protect your content from unauthorized use by combining a digital rights management \(DRM\) system key server with your AWS Elemental encoders and with your media players\. Follow the steps in this chapter to get started using encryption\. 
+Protect your content from unauthorized use by combining a digital rights management \(DRM\) key provider with your encryptor and with your media players\. 
 
 **Topics**
-+ [Step 1: Check Supported Technologies](#check-supported-technologies)
-+ [Step 2: Get On Board with a DRM Solution Provider](#choose-drm-system)
++ [Get On Board with a DRM Platform Provider](#choose-drm-system)
++ [SPEKE Support in AWS Services and Products](#check-supported-technologies)
 
-## Step 1: Check Supported Technologies<a name="check-supported-technologies"></a>
+## Get On Board with a DRM Platform Provider<a name="choose-drm-system"></a>
 
-The following support matrices show the DRM system support for each streaming protocol\. Verify that your streaming protocol and the DRM system that you want are available for your AWS Elemental service or product\.
-
-------
-#### [ AWS Elemental MediaConvert ]
-
-
-|  | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
-| --- | --- | --- | --- | --- | 
-| DASH | √ | √ |  |  | 
-| Apple HLS |  |  | √ | √ | 
-| Microsoft Smooth | √ |  |  |  | 
-
-------
-#### [ AWS Elemental MediaPackage ]
-
-
-|  | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
-| --- | --- | --- | --- | --- | 
-| DASH | √ with key rotation | √ with key rotation |  |  | 
-| Apple HLS |  |  | √ with key rotation | √ with key rotation | 
-| Microsoft Smooth | √ |  |  |  | 
-| CMAF Apple HLS |  |  | √ with key rotation |  | 
-
-------
-#### [ AWS Elemental Live ]
-
-
-|  | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
-| --- | --- | --- | --- | --- | 
-| DASH | √ | √ |  |  | 
-| Apple HLS TS |  |  | √ with key rotation | √ with key rotation | 
-| Apple HLS fMP4 |  |  | √ with key rotation |  | 
-
-------
-
-## Step 2: Get On Board with a DRM Solution Provider<a name="choose-drm-system"></a>
-
-The following Amazon partners provide third\-party DRM system implementations for AWS Elemental products\. For details about each solution provider's offerings and information about how to contact them, follow the links to their Amazon Partner Network pages\. Partners that don't have a link don't currently have an Amazon Partner Network page, but you can contact them directly\. The partners can help you get set up to use their solutions with AWS Elemental media services and products\. 
+The following Amazon partners provide third\-party DRM platform implementations for SPEKE\. For details about their offerings and information about how to contact them, follow the links to their Amazon Partner Network pages\. Partners that don't have a link don't currently have an Amazon Partner Network page, but you can contact them directly\. The partners can help you get set up to use their platforms\. 
 + Axinom
 + [BuyDRM](https://aws.amazon.com/partners/find/partnerdetails/?n=BuyDRM&id=001E000000UfZXLIA3) 
 + [castLabs](https://aws.amazon.com/partners/find/partnerdetails/?n=castLabs&id=001E000001Bv2lcIAB)
@@ -56,5 +19,36 @@ The following Amazon partners provide third\-party DRM system implementations fo
 + [Kaltura](https://aws.amazon.com/partners/find/partnerdetails/?n=Kaltura&id=001E000000Rp5FnIAJ)
 + NEXTSCAPE, Inc\.
 + [Verimatrix](https://aws.amazon.com/partners/find/partnerdetails/?n=Verimatrix&id=001E000000be2SEIAY)
++ VUALTO
 
-AWS uses a standard key exchange protocol, which is documented in our Secure Packager and Encoder Key Exchange \(SPEKE\) Digital Rights Management \(DRM\) specification at [SPEKE API Specification for DRM Solution Providers](speke-api-specification.md)\. Each Amazon partner who provides a third\-party DRM system implementation for AWS Elemental products exposes a SPEKE\-compliant REST API to the partner's key servers\. 
+## SPEKE Support in AWS Services and Products<a name="check-supported-technologies"></a>
+
+This section lists the SPEKE support that is provided by AWS Media Services that run in the AWS Cloud and by AWS on\-premises media products\. Verify that your streaming protocol and the DRM system that you want are available for your service or product\.
+
+
+**AWS Elemental MediaConvert \- Service That Runs in the AWS Cloud**  
+
+| Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
+| --- | --- | --- | --- | --- | 
+| DASH | √ | √ |  |  | 
+| Apple HLS |  |  | √ | √ | 
+| Microsoft Smooth | √ |  |  |  | 
+
+
+**AWS Elemental MediaPackage \- Service That Runs in the AWS Cloud**  
+
+| Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
+| --- | --- | --- | --- | --- | 
+| DASH | √ with key rotation | √ with key rotation |  |  | 
+| Apple HLS |  |  | √ with key rotation | √ with key rotation | 
+| Microsoft Smooth | √ |  |  |  | 
+| CMAF Apple HLS |  |  | √ with key rotation |  | 
+
+
+**AWS Elemental Live \- On\-premises Product**  
+
+| Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
+| --- | --- | --- | --- | --- | 
+| DASH | √ | √ |  |  | 
+| Apple HLS TS |  |  | √ with key rotation | √ with key rotation | 
+| Apple HLS fMP4 |  |  | √ with key rotation |  | 
