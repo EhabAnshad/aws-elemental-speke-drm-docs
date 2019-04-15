@@ -1,6 +1,6 @@
-# SPEKE API Specification for DRM Key Providers<a name="speke-api-specification"></a>
+# SPEKE API Specification<a name="speke-api-specification"></a>
 
-This is the REST API specification for Secure Packager and Encoder Key Exchange \(SPEKE\)\. Use this specification to write a REST API for your digital rights management \(DRM\) platform key provider\. 
+This is the REST API specification for Secure Packager and Encoder Key Exchange \(SPEKE\)\. Use this specification to provide DRM copyright protection for customers who use encryption\. 
 
 In a video streaming workflow, the encryption engine communicates with the DRM platform key provider to request content keys\. These keys are highly sensitive, so it is critical that the key provider and encryption engine establish a highly secure, trusted communication channel\. You can also encrypt the content keys in the document for more secure, end\-to\-end encryption\.
 

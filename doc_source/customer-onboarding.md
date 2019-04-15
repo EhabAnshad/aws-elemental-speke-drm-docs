@@ -1,6 +1,6 @@
 # Customer Onboarding<a name="customer-onboarding"></a>
 
-Protect your content from unauthorized use by combining a digital rights management \(DRM\) key provider with your encryptor and with your media players\. 
+Protect your content from unauthorized use by combining a Secure Packager and Encoder Key Exchange \(SPEKE\) digital rights management \(DRM\) key provider with your encryptor and with your media players\. SPEKE defines the standard for communication between encryptors and packagers of media content and digital rights management \(DRM\) key providers\. To onboard, you choose a DRM platform key provider and configure the communication between the key provider and your encryptors and players\. 
 
 **Topics**
 + [Get On Board with a DRM Platform Provider](#choose-drm-system)
@@ -15,11 +15,16 @@ The following Amazon partners provide third\-party DRM platform implementations 
 + [Conax AS](https://aws.amazon.com/partners/find/partnerdetails/?n=Conax%20AS&id=0010L00001nEJPEQA4)
 + [EZDRM](https://aws.amazon.com/partners/find/partnerdetails/?n=EZDRM&id=001E000000UfZgxIAF)
 + [INKA Entworks](https://aws.amazon.com/partners/find/partnerdetails/?n=INKA%20Entworks%20Inc%2C&id=001E000000qGr8GIAS)
++ [Insys Video Technologies](https://aws.amazon.com/partners/find/partnerdetails/?n=INSYS&id=0010L00001jS1XHQA0)
++ [Intertrust Technologies](https://aws.amazon.com/partners/find/partnerdetails/?n=Intertrust%20Technologies&id=0010L00001o9pcfQAA)
 + [Irdeto](https://aws.amazon.com/partners/find/partnerdetails/?n=Irdeto&id=001E000000Rl0x2IAB)
 + [Kaltura](https://aws.amazon.com/partners/find/partnerdetails/?n=Kaltura&id=001E000000Rp5FnIAJ)
-+ NEXTSCAPE, Inc\.
++ [NAGRA](https://aws.amazon.com/partners/find/partnerdetails/?n=Nagravision%20SA%20-%20Kudelski%20Group&id=0010L00001sC6iuQAC)
++ [NEXTSCAPE, Inc\.](https://aws.amazon.com/partners/find/partnerdetails/?n=NEXTSCAPE%20INC.&id=0010L00001u4MbTQAU)
 + [Verimatrix](https://aws.amazon.com/partners/find/partnerdetails/?n=Verimatrix&id=001E000000be2SEIAY)
++ Viaccess\-Orca
 + VUALTO
++ WebStream
 
 ## SPEKE Support in AWS Services and Products<a name="check-supported-technologies"></a>
 
@@ -52,3 +57,13 @@ This section lists the SPEKE support that is provided by AWS Media Services that
 | DASH | √ | √ |  |  | 
 | Apple HLS TS |  |  | √ with key rotation | √ with key rotation | 
 | Apple HLS fMP4 |  |  | √ with key rotation |  | 
+
+
+**AWS Elemental Delta \- On\-premises Product**  
+
+| Support matrix for protocol and DRM system | Microsoft PlayReady | Google Widevine | Apple FairPlay | AES\-128 | 
+| --- | --- | --- | --- | --- | 
+| DASH | √ with key rotation | √ with key rotation |  |  | 
+| Apple HLS |  |  | √ with key rotation | √ with key rotation | 
+| Microsoft Smooth | √ |  |  |  | 
+| CMAF Apple HLS |  |  | √ with key rotation |  | 

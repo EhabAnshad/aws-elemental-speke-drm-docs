@@ -26,7 +26,7 @@ The following illustration shows the high\-level architecture when SPEKE is used
 
 These are the main services and components:
 + **Encryptor** – Provides the encryption technology in the AWS Cloud\. The encryptor receives requests from its operator and retrieves the required encryption keys from the DRM key provider, through Amazon API Gateway, to secure the encrypted content\. It delivers the encrypted content to an Amazon S3 bucket or through an Amazon CloudFront distribution\. 
-+ **AWS IAM and Amazon API Gateway** – Manages customer\-trusted roles and proxy communication between the encryptor and the key provider\. API Gateway provides logging capabilities and lets customers control their relationships with the encryptor and with the DRM platform\. Customers enable key provider access through IAM role configuration\. 
++ **AWS IAM and Amazon API Gateway** – Manages customer\-trusted roles and proxy communication between the encryptor and the key provider\. API Gateway provides logging capabilities and lets customers control their relationships with the encryptor and with the DRM platform\. Customers enable key provider access through IAM role configuration\. The API Gateway must reside in the same AWS Region as the encryptor\.
 + **AWS Certificate Manager** – \(Optional\) Provides certificate management for content key encryption\. Encrypting content keys is the recommended practice for secure communication\. The certificate manager must reside in the same AWS Region as the encryptor\.
 + **DRM platform key provider** – Provides encryption keys to the encryptor through a SPEKE\-compliant API\. The provider also provides licenses to media players for decryption\. 
 + **Player** – Requests keys from the same DRM platform key provider, which the player uses to unlock the content and serve it to its viewers\.
@@ -39,4 +39,4 @@ The API Gateway API, the encryptor, and ACM must all reside in the same AWS Regi
 Partner with an AWS Elemental DRM platform provider to get set up to use encryption\. For details, see [Customer Onboarding](customer-onboarding.md)\.
 
 **Are you a DRM platform provider or a customer with your own key provider?**  
-Expose a REST API for your key provider in compliance with the SPEKE specification\. For details, see [SPEKE API Specification for DRM Key Providers](speke-api-specification.md)\.
+Expose a REST API for your key provider in compliance with the SPEKE specification\. For details, see [SPEKE API Specification](speke-api-specification.md)\.
