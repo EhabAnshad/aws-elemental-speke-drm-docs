@@ -12,14 +12,14 @@ The following Amazon partners provide third\-party DRM platform implementations 
 + Axinom
 + [BuyDRM](https://aws.amazon.com/partners/find/partnerdetails/?n=BuyDRM&id=001E000000UfZXLIA3) 
 + [castLabs](https://aws.amazon.com/partners/find/partnerdetails/?n=castLabs&id=001E000001Bv2lcIAB)
-+ [Conax AS](https://aws.amazon.com/partners/find/partnerdetails/?n=Conax%20AS&id=0010L00001nEJPEQA4)
++ Conax AS
 + [EZDRM](https://aws.amazon.com/partners/find/partnerdetails/?n=EZDRM&id=001E000000UfZgxIAF)
 + [INKA Entworks](https://aws.amazon.com/partners/find/partnerdetails/?n=INKA%20Entworks%20Inc%2C&id=001E000000qGr8GIAS)
 + [Insys Video Technologies](https://aws.amazon.com/partners/find/partnerdetails/?n=INSYS&id=0010L00001jS1XHQA0)
 + [Intertrust Technologies](https://aws.amazon.com/partners/find/partnerdetails/?n=Intertrust%20Technologies&id=0010L00001o9pcfQAA)
 + [Irdeto](https://aws.amazon.com/partners/find/partnerdetails/?n=Irdeto&id=001E000000Rl0x2IAB)
 + [Kaltura](https://aws.amazon.com/partners/find/partnerdetails/?n=Kaltura&id=001E000000Rp5FnIAJ)
-+ [NAGRA](https://aws.amazon.com/partners/find/partnerdetails/?n=Nagravision%20SA%20-%20Kudelski%20Group&id=0010L00001sC6iuQAC)
++ NAGRA
 + [NEXTSCAPE, Inc\.](https://aws.amazon.com/partners/find/partnerdetails/?n=NEXTSCAPE%20INC.&id=0010L00001u4MbTQAU)
 + [Verimatrix](https://aws.amazon.com/partners/find/partnerdetails/?n=Verimatrix&id=001E000000be2SEIAY)
 + Viaccess\-Orca
